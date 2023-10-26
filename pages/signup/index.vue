@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="signup-container">
     <component :is="currentComponent" @nextStep="nextStep"></component>
   </div>
 </template>
@@ -49,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.signup-container {
+  min-width: 500px;
+}
+</style>
