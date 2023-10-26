@@ -19,8 +19,6 @@ export default {
 .main-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .main-image {
