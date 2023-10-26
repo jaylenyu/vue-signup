@@ -1,0 +1,11 @@
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-contents: space-between;
+  width: 100%;
+}
+
+.input-group {
+  margin: 100px 0;
+}

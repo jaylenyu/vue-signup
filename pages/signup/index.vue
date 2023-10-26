@@ -1,6 +1,6 @@
 <template>
   <div class="signup-container">
-    <component :is="currentComponent" @nextStep="nextStep"></component>
+    <component :is="currentComponent" @nextStep="nextStep" @prevStep="prevStep"></component>
   </div>
 </template>
 
@@ -34,6 +34,10 @@ export default {
     nextStep() {
       if (this.currentStep < 3) {
         this.currentStep++;
+      }
+    }, prevStep() {
+      if (this.currentStep > 1) {
+        this.currentStep--;
       }
     },
     changeStep(stepChange) {

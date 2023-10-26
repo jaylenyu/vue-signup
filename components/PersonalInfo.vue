@@ -1,7 +1,7 @@
 <template>
-  <div class="personal-container">
+  <div class="custom-container">
     <h3>개인정보 입력</h3>
-    <from class="personal-input-group">
+    <from class="input-group">
       <input type="email" placeholder="이메일" />
       <input type="password" placeholder="비밀번호" />
       <input type="password" placeholder="비밀번호 확인" />
@@ -17,17 +17,6 @@ export default {
 </script>
 
 <style scoped>
-.personal-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-}
-
-.personal-input-group {
-  margin: 100px 0;
-}
-
 input {
   margin-bottom: 30px;
 }

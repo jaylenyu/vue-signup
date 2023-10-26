@@ -2,5 +2,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
-  css: ["plain-css"],
+  css: ["plain-css", "~/assets/css/common.css"],
 });
