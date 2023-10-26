@@ -1,8 +1,6 @@
 <template>
   <div>
     <component :is="currentComponent" @nextStep="nextStep"></component>
-    <button v-if="currentStep < 3" @click="nextStep">다음</button>
-    <button v-if="currentStep === 3" @click="completeSignUp">회원가입 완료하기</button>
   </div>
 </template>
 
@@ -36,6 +34,12 @@ export default {
     nextStep() {
       if (this.currentStep < 3) {
         this.currentStep++;
+      }
+    },
+    changeStep(stepChange) {
+      const newStep = this.currentStep + stepChange;
+      if (newStep >= 1 && newStep <= 3) {
+        this.currentStep = newStep;
       }
     },
     completeSignUp() {
