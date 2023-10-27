@@ -117,7 +117,6 @@ export default {
 <style scoped>
 .address-box {
   display: flex;
-  align-items: start;
   justify-content: space-between;
   margin-bottom: 0;
 }
@@ -129,15 +128,5 @@ export default {
 .button-group {
   display: flex;
   justify-content: space-between;
-}
-
-input {
-  margin-bottom: 30px;
-}
-
-.error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
 }
 </style>
