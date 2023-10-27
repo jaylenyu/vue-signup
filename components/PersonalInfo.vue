@@ -69,9 +69,4 @@ export default {
 .input-group div {
   margin-bottom: 30px;
 }
-
-.error-message {
-  color: red;
-  font-size: 0.8em;
-}
 </style>
