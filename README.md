@@ -24,10 +24,10 @@ $ npm run dev
 
 | Page              | GIF                                                                                                     | Contents |
 |-------------------|---------------------------------------------------------------------------------------------------------|----------|
-| email & password      | ![personalInfo](https://github.com/jaylenyu/vue-signup/assets/124610396/618278f3-5296-42ea-9996-88bae2ed85f1)| 이메일 유효성검사와 비밀번호 유효성 검사 및 일치 확인 구현 <br/> |
-| address          | ![Address](https://github.com/jaylenyu/vue-signup/assets/124610396/b0163693-7f8b-4be5-a5c9-e0da38ffc2f6)| 사용자 경험을 높이기 위해 전화번호에 하이픈 자동으로 삽입. <br/> 전화번호가 10자리면 000-000-0000, 11자리면 000-0000-0000으로 자동으로 하이픈이 교체되도록 구현. <br/> daumpost api에서 우편번호와 주소를 return받아 input에 삽입되도록 구현. |
-| credit              |  ![Creditdemo](https://github.com/jaylenyu/vue-signup/assets/124610396/56793b37-cb6b-465f-9031-7ba4ce60251d)| 사용자 경험을 높이기 위해 4자리 입력 후 다음 input으로 focus를 이동. <br/> 카드번호 유효성검사 및 입력값이 16자리인지 감지 후 에러메세지 구현.  |
-| complete           |  ![complete](https://github.com/jaylenyu/vue-signup/assets/124610396/43f53115-660c-4840-bd60-11f7284bc296)| 사용자가 입력한 정보를 Piana에 저장 및 관리. <br/> 데이터를 해당 컴포넌트로 불러와 페이지 구현. |
+| email & password      |![personalInfo](https://github.com/jaylenyu/vue-signup/assets/124610396/479d5774-c1fd-47b9-adf9-c736356e6a17)| 이메일 유효성검사와 비밀번호 유효성 검사 및 일치 확인 구현 <br/> |
+| address          | ![Address](https://github.com/jaylenyu/vue-signup/assets/124610396/6e01d735-b764-4fa1-9b7b-f8bafa3ee984)| 사용자 경험을 높이기 위해 전화번호에 하이픈 자동으로 삽입. <br/> 전화번호가 10자리면 000-000-0000, 11자리면 000-0000-0000으로 자동으로 하이픈이 교체되도록 구현. <br/> daumpost api에서 우편번호와 주소를 return받아 input에 삽입되도록 구현. |
+| credit              | ![Creditdemo](https://github.com/jaylenyu/vue-signup/assets/124610396/968f4a28-7f91-42cb-980f-21edc4f17989)| 사용자 경험을 높이기 위해 4자리 입력 후 다음 input으로 focus를 이동. <br/> 카드번호 유효성검사 및 입력값이 16자리인지 감지 후 에러메세지 구현.  |
+| complete           | ![complete](https://github.com/jaylenyu/vue-signup/assets/124610396/86b5eaa7-69c9-45cd-b33e-a928900efdb4)| 사용자가 입력한 정보를 Piana에 저장 및 관리. <br/> 데이터를 해당 컴포넌트로 불러와 페이지 구현. |
 
 <br/>
 
