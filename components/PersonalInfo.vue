@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import { useUserStore } from '../store/personalInfo'
+
 export default {
   name: 'PersonalInfo',
   data() {
@@ -31,6 +33,17 @@ export default {
       passwordError: '',
       passwordConfirmError: '',
     };
+  },
+  created() {
+    const userStore = useUserStore();
+    this.email = userStore.personalInfo.email;
+    this.password = userStore.personalInfo.password;
+    this.passwordConfirm = userStore.personalInfo.passwordConfirm;
+  },
+  computed: {
+    userStore() {
+      return useUserStore();
+    },
   },
   methods: {
     validateForm() {
@@ -45,6 +58,7 @@ export default {
         this.passwordConfirmError = '비밀번호가 일치하지 않습니다.';
       }
       if (!this.emailError && !this.passwordError && !this.passwordConfirmError) {
+        this.userStore.setPersonalInfo(this.email, this.password, this.passwordConfirm);
         this.$emit('nextStep');
       }
     },
@@ -64,6 +78,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 .input-group div {
