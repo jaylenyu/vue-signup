@@ -3,10 +3,10 @@
     <h3>카드정보 입력</h3>
     <form class="input-group">
       <div class="credit-input">
-        <input v-model="creditPart1" type="text" maxlength="4" placeholder="0000">
-        <input v-model="creditPart2" type="text" maxlength="4" placeholder="0000">
-        <input v-model="creditPart3" type="text" maxlength="4" placeholder="0000">
-        <input v-model="creditPart4" type="text" maxlength="4" placeholder="0000">
+        <input v-model="creditPart1" type="text" maxlength="4" placeholder="0000" @input="moveFocus(1)" ref="input1">
+        <input v-model="creditPart2" type="text" maxlength="4" placeholder="0000" @input="moveFocus(2)" ref="input2">
+        <input v-model="creditPart3" type="text" maxlength="4" placeholder="0000" @input="moveFocus(3)" ref="input3">
+        <input v-model="creditPart4" type="text" maxlength="4" placeholder="0000" ref="input4">
       </div>
       <p class="error-message" v-if="creditError">{{ creditError }}</p>
     </form>
@@ -43,6 +43,11 @@ export default {
       let sum = creditReverseArray.reduce((acc, curr) => acc + curr, 0);
       const creditValidate = sum % 10;
       return creditValidate === 0;
+    },
+    moveFocus(inputNumber) {
+      if (this[`creditPart${inputNumber}`].length === 4 && inputNumber < 4) {
+        this.$refs[`input${inputNumber + 1}`].focus();
+      }
     },
     completeSignUp() {
       this.creditError = "";
