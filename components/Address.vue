@@ -35,15 +35,18 @@
 </template>
 
 <script>
+import { useAddressStore } from '../store/address'
+
 export default {
   name: 'Address',
   data() {
+    const addressStore = useAddressStore();
     return {
-      name: '',
-      phoneNumber: '',
-      postcode: '',
-      address: '',
-      detailAddress: '',
+      name: addressStore.name,
+      phoneNumber: addressStore.phoneNumber,
+      postcode: addressStore.postcode,
+      address: addressStore.address,
+      detailAddress: addressStore.detailAddress,
       nameError: '',
       phoneNumberError: '',
       addressError: ''
@@ -89,6 +92,8 @@ export default {
         this.addressError = "주소를 입력해 주세요.";
       }
       if (this.nameError.length === 0 && this.phoneNumberError.length === 0 && this.addressError.length === 0) {
+        const addressStore = useAddressStore();
+        addressStore.setAddressInfo(this.name, this.phoneNumber, this.postcode, this.address, this.detailAddress);
         this.$emit('nextStep');
       }
     },
